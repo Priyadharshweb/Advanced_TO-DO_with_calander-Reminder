@@ -1,0 +1,174 @@
+/* About Us Page Styles */
+.aboutus-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Hero Section */
+.aboutus-hero {
+  background: linear-gradient(135deg, #e4cfa8 0%, #3d3426 100%);
+  color: white;
+  padding: 120px 0 80px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.aboutus-hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.aboutus-hero p {
+  font-size: 1.4rem;
+  opacity: 0.9;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 40px;
+  color: white;
+}
+
+/* Mission Section */
+.aboutus-mission {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.aboutus-mission-text h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #231e15;
+  line-height: 1.3;
+}
+
+.aboutus-mission-text p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.aboutus-mission-image {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutus-mission-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Why Section */
+.aboutus-why {
+  padding: 80px 0 40px;
+  text-align: center;
+  background-color: white;
+}
+
+.section-title-why {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #231e15;
+  font-weight: 700;
+}
+
+.aboutus-why p {
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 0;
+}
+/* Hero Section */
+.aboutus-hero {
+  background: linear-gradient(to right, #f3f2f0, #5c5140);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+/* "We Do What We Love" Section */
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  flex-wrap: wrap;
+  background-color: #f6f6f6;
+}
+.headerText h2 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+.headerText p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+.headerImage {
+  width: 400px;
+  height: 300px;
+  background: url('https://img.freepik.com/free-vector/colorful-todo-list-illustration_1308-172724.jpg') center center / cover no-repeat;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+/* Feature Gallery Section */
+.feature-gallery {
+  padding: 80px 40px;
+}
+.feature-gallery-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.feature-gallery-header .highlight {
+  font-size: 2.2rem;
+  color: #333;
+}
+.feature-gallery-header .subheading {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+.feature-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.feature-card h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+.feature-card p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+.icon-placeholder {
+  font-size: 2rem;
+}

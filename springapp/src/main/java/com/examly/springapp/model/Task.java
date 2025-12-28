@@ -22,6 +22,10 @@ public class Task {
     @JoinColumn(name = "userId", nullable = false)
     private User user;
 
+    @ManyToOne
+    @JoinColumn(name = "categoryId", nullable = true)
+    private Categories category;
+
     @Column(name="title")
     private String title;
     @Column(name="description")
@@ -55,4 +59,7 @@ public class Task {
 
     public String getStatus(){return status;}
     public void setStatus(String status){this.status=status;}
+
+    public Categories getCategory(){return category;}
+    public void setCategory(Categories category){this.category=category;}
 }

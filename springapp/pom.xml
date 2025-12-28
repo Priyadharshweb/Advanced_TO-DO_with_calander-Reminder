@@ -23,6 +23,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+		<!-- <dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-boot-starter</artifactId>
+    <version>3.0.0</version>
+</dependency> -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -42,26 +47,20 @@
 			<version>8.0.32</version>
 		</dependency>
 
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency> -->
+		</dependency>
 
-		<!-- Swagger/OpenAPI for Spring Boot 3+ -->
-<!-- Compatible with Spring Boot 2.7.x -->
-<dependency>
-  <groupId>org.springdoc</groupId>
-  <artifactId>springdoc-openapi-ui</artifactId>
-  <version>1.6.15</version>
-</dependency>
-
-
-
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.32</version>
 			<optional>true</optional>
 		</dependency>
 
@@ -72,17 +71,10 @@
 			<scope>test</scope>
 		</dependency>
 	
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-mail</artifactId>
-			<version>2.6.3</version>
-		</dependency> -->
-
-		
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<scope>test</scope>
+			
 		</dependency>
 		<dependency>
     <groupId>org.springdoc</groupId>
@@ -96,7 +88,7 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency> -->
-<!-- In pom.xml -->
+
 	</dependencies>
 
 	<build>

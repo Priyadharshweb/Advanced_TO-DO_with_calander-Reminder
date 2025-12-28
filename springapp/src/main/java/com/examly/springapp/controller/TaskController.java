@@ -5,6 +5,8 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.examly.springapp.model.Task;
 import com.examly.springapp.service.TaskService;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:8081"})
 @RestController
 @RequestMapping("/api/tasks")
 public class TaskController {
@@ -30,11 +32,23 @@ public class TaskController {
         return taskser.fetchTasking();
        
     }
+    // @PostMapping
+    // public Task createTask (@Valid @RequestBody Task data)
+    // {
+    //     return taskser.creatingTask(data);
+    // }
     @PostMapping
-    public Task createTask (@Valid @RequestBody Task data)
-    {
-        return taskser.creatingTask(data);
+public ResponseEntity<?> createTask(@Valid @RequestBody Task data) {
+    try {
+        Task created = taskser.creatingTask(data);
+        return ResponseEntity.ok(created);
+    } catch (Exception e) {
+        e.printStackTrace();
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body("Error creating task: " + e.getMessage());
     }
+}
+
     @DeleteMapping("/{id}")
     public String deleteTask(@PathVariable long id)
     {

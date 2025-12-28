@@ -14,11 +14,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.examly.springapp.dto.ReminderDTO;
 import com.examly.springapp.model.Remainder;
-import com.examly.springapp.model.Task;
-
 import com.examly.springapp.service.ReminderService;
 
 @CrossOrigin(origins = "*")

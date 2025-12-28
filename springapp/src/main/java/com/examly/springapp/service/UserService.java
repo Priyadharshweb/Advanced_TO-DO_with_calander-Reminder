@@ -38,14 +38,24 @@ public class UserService {
     }
 
     public String updatingUser(long id, User data2) {
-        if(userRepo.existsById(id))
-        {
-            userRepo.save(data2);
-            return "Data updated Succesfully";
-        }
-        else{
-            return id+"Data not found";
-        }
+    return userRepo.findById(id).map(existingUser -> {
+        existingUser.setName(data2.getName());
+        existingUser.setEmail(data2.getEmail());
+        existingUser.setRole(data2.getRole());
+        userRepo.save(existingUser);
+        return "Data updated successfully";
+    }).orElse(id + " Data not found");
+}
+
+
+    public User findByEmail(String email) {
+        // TODO Auto-generated method stub
+        return userRepo.findByEmail(email).orElse(null);
+
+    }
+
+    public User findById(long id) {
+        return userRepo.findById(id).orElse(null);
     }
     
 }

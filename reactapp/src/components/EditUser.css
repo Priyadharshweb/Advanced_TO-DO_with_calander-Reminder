@@ -1,0 +1,57 @@
+.edit-user-container {
+  width: 400px;
+  margin: 50px auto;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.edit-user-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.edit-user-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-user-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.edit-user-form input,
+.edit-user-form select,
+.edit-user-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.edit-user-form input:focus,
+.edit-user-form select:focus,
+.edit-user-form textarea:focus {
+  outline: none;
+  border-color: #1976d2;
+}
+
+.submit-btn {
+  padding: 10px;
+  background-color: #1976d2;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #135ba1;
+}

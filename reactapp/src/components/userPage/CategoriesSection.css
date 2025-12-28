@@ -1,0 +1,134 @@
+.categories-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.categories-left,
+.categories-right {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.categories-left {
+  background-color: #fff;
+}
+
+.categories-logo {
+  height: 30px;
+  margin-bottom: 30px;
+}
+
+.categories-left h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.categories-left p {
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.categories-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.category-option {
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s ease;
+  background-color: white;
+}
+
+.category-option:hover {
+  background-color: #f7f7f7;
+}
+
+.category-option.selected {
+  background-color: #f5e945;
+  color: white;
+  border-color: #080808;
+}
+
+.collab-toggle {
+  margin: 30px 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 500;
+}
+
+.toggle-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-btn.enabled {
+  background-color: #4caf50;
+  color: white;
+}
+
+.toggle-btn.disabled {
+  background-color: #e0e0e0;
+  color: #555;
+}
+
+.launch-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #f87171;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.launch-btn:disabled {
+  background-color: #ffcccc;
+  cursor: not-allowed;
+}
+
+.categories-right {
+  background-color: #fff7f2;
+  align-items: center;
+  padding: 50px;
+  margin-top: 80px;
+}
+
+.categories-right img {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
+.step-indicator {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #fce5cd;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+}

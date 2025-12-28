@@ -9,12 +9,11 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
 import lombok.Data;
 
 @Entity
 @Data
-@Table(name="Reminder")
+@Table(name="reminder")
 public class Remainder {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

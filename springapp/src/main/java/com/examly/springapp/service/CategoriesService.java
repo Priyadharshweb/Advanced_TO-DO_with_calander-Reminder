@@ -11,6 +11,7 @@ import com.examly.springapp.model.Remainder;
 import com.examly.springapp.model.User;
 import com.examly.springapp.repository.CategoriesRepository;
 import com.examly.springapp.repository.UserRepository;
+import com.examly.springapp.repository.TaskRepository;
 import java.util.Optional;
 
 @Service
@@ -20,6 +21,9 @@ public class CategoriesService {
      
     @Autowired
     UserRepository userRepo;
+    
+    @Autowired
+    TaskRepository taskRepo;
     public List<Categories> fetchCategory() {
         return catRepo.findAll();
     }
@@ -43,12 +47,21 @@ public class CategoriesService {
     public String deleteCategories(long id) {
         if(catRepo.existsById(id))
         {
-              catRepo.deleteById(id);
-              return "id deleted succefully";
+            // First, update all tasks that reference this category to have null category
+            taskRepo.findAll().forEach(task -> {
+                if(task.getCategory() != null && task.getCategory().getId() == id) {
+                    task.setCategory(null);
+                    taskRepo.save(task);
+                }
+            });
+            
+            // Then delete the category
+            catRepo.deleteById(id);
+            return "Category deleted successfully";
         }
         else
         {
-            return id+ "Data not found";
+            return "Category with id " + id + " not found";
         }
     }
 

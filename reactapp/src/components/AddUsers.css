@@ -1,0 +1,46 @@
+
+.add-user-container {
+  max-width: 500px;
+  margin: 1px auto;
+  padding: 25px;
+  background: #f1eaa7; 
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-heading {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.add-user-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.add-user-form input,
+.add-user-form select,
+.add-user-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #231e15;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #403726;
+}
